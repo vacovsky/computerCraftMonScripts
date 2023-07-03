@@ -1,0 +1,23 @@
+Pepdroll 7 is provided free of charge for everyone,
+
+There is no warranty on the software, 
+
+The system is still evolving, everyone has the right
+to provide feedback to solve a specific failure
+or report errors,
+
+System files are repaired at irregular intervals,
+
+Unless otherwise set by the user,the system
+is updated automatically,
+
+It is forbidden to use parts of the source code
+and pass it off as your own, without the author's
+permission,
+
+In no event shall the authors or copyright holders
+be liable for any claim, damages or other liability,
+whether in an action of contract, tort or otherwise,
+arising from, out of or in connection with
+the software or the use or other ealings
+in the software.

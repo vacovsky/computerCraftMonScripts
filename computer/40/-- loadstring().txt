@@ -1,0 +1,61 @@
+      -- loadstring()
+   
+
+
+
+      -- if v:match("get") ~= nil or v:match("get") ~= nil
+
+
+   -- -- mechanical crusher
+   -- local mc = peripheral.find("crusher")
+   -- MM.crusher01 = {}
+   -- MM.crusher01.taskProgressPercent = mc.getRecipeProgress() / mc.getTicksRequired()
+   -- MM.crusher01.recipeTicks = mc.getTicksRequired()
+   -- MM.crusher01.energyPercent = (mc.getEnergyFilledPercentage() / 1) * 100
+   -- MM.crusher01.energyUnits = mc.getEnergy()
+   -- MM.crusher01.input = mc.getInput()
+   -- -- MM.crusher01.output = mc.getOutput()
+   -- ----
+   -- -- chemicalOxidizer
+   -- local co = peripheral.find("chemicalOxidizer")
+   -- MM.chemicalOxidizer01 = {}
+   -- MM.chemicalOxidizer01.taskProgressPercent = co.getRecipeProgress() / co.getTicksRequired()
+   -- MM.chemicalOxidizer01.recipeTicks = co.getTicksRequired()
+   -- MM.chemicalOxidizer01.energyPercent = (co.getEnergyFilledPercentage() / 1) * 100
+   -- MM.chemicalOxidizer01.energyUnits = co.getEnergy()
+   -- MM.chemicalOxidizer01.input = co.getInput()
+   -- ----
+   -- -- pressurizedReactionChamber
+   -- local prc = peripheral.find("pressurizedReactionChamber")
+   -- MM.pressurizedReactionChamber01 = {}
+   -- MM.pressurizedReactionChamber01.taskProgressPercent = prc.getRecipeProgress() / prc.getTicksRequired()
+   -- MM.pressurizedReactionChamber01.recipeTicks = prc.getTicksRequired()
+   -- MM.pressurizedReactionChamber01.energyPercent = (prc.getEnergyFilledPercentage() / 1) * 100
+   -- MM.pressurizedReactionChamber01.energyUnits = prc.getEnergy()
+   -- -- MM.pressurizedReactionChamber01.input = prc.getInput()
+
+   -- ----
+   -- -- chemicalDissolutionChamber
+
+   -- ----
+   -- -- electrolyticSeparator
+
+   -- ----
+   -- -- rotaryCondenstrator 0
+   -- local rc0 = peripheral.find("rotaryCondensentrator_0")
+   -- MM.pressurizedReactionChamber01 = {}
+   -- MM.pressurizedReactionChamber01.taskProgressPercent = rc0.getRecipeProgress() / rc0.getTicksRequired()
+   -- MM.pressurizedReactionChamber01.recipeTicks = rc0.getTicksRequired()
+   -- MM.pressurizedReactionChamber01.energyPercent = (rc0.getEnergyFilledPercentage() / 1) * 100
+   -- MM.pressurizedReactionChamber01.energyUnits = rc0.getEnergy()
+   -- MM.pressurizedReactionChamber01.input = rc0.getInput()
+   
+   -- -- rotaryCondenstrator 1
+   -- local rc1 = peripheral.find("rotaryCondensetrator_1")
+   -- MM.pressurizedReactionChamber01 = {}
+   -- MM.pressurizedReactionChamber01.taskProgressPercent = rc1.getRecipeProgress() / rc1.getTicksRequired()
+   -- MM.pressurizedReactionChamber01.recipeTicks = rc1.getTicksRequired()
+   -- MM.pressurizedReactionChamber01.energyPercent = (rc1.getEnergyFilledPercentage() / 1) * 100
+   -- MM.pressurizedReactionChamber01.energyUnits = rc1.getEnergy()
+   -- MM.pressurizedReactionChamber01.input = rc1.getInput()
+   

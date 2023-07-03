@@ -1,0 +1,59 @@
+args = {...}
+length = tonumber(args[1])
+width = tonumber(args[2])
+needFuel = true
+if not width or not length or #args ~= 2 then
+    print("Usage: "  .. fs.getName(shell.getRunningProgram()) .. " <length> <width>")
+    print("<length> is the amount of times it will go forward from the starting point")
+    print("<width> is the amount of times it will go to the right of the starting point")
+    return
+end
+
+while needFuel do
+    if turtle.getFuelLevel() < 300 then
+        print("I need fuel!\nWhich slot must I use?")
+        nSlot = tonumber(read())
+        turtle.select(nSlot)
+        if turtle.refuel() then
+            print("Fueled! I now have " .. turtle.getFuelLevel .. " fuel.")
+        else
+            print("No fuel in that slot.")
+        end
+    else
+        needFuel = false
+    end
+end
+
+for i = 1, length do
+    for k = 1, width do
+        while turtle.detect() do
+            turtle.dig()
+            sleep(0.4)
+        end
+        turtle.forward()
+        x = 0
+        while turtle.detectUp() do
+            turtle.digUp()
+            turtle.up()
+            x = x + 1
+        end
+        for l = 1, x do
+            turtle.down()
+        end
+    end
+    for k = 1, width do
+        turtle.back()
+    end
+    if i ~= length then
+        turtle.turnRight()
+        turtle.forward()
+        turtle.turnLeft()
+    end
+end
+
+-- Return to start
+turtle.turnLeft()
+for i = 1, length do
+    turtle.forward()
+end
+turtle.turnRight()

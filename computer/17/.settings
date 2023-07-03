@@ -1,0 +1,4 @@
+{
+  [ "motd.enable" ] = false,
+  label = "Chunkeroo",
+}

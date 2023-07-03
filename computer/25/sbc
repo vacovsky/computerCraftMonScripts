@@ -1,0 +1,18 @@
+local broadcast_location = true
+
+function safe_broadcast()
+    if pcall(rednet.send(
+        9, "name: Simple Jack Jr\nposition: " .. tostring(gps.locate()) .. "\nfuel: " .. tostring(turtle.getFuelLevel()),
+         "Turtle Locator"))
+    end
+end
+
+function broadcast_location()
+    if broadcast_location and safe_broadcast() then print("successfull phoned home") else ("error calling home")
+end
+safe_broadcast()
+
+function swap_and_broadcast()
+    -- do swap here; slot 16? 
+    broadcast_location()
+end
