@@ -23,29 +23,36 @@ function GetStatusOfAttachedDevices()
       MM[deviceName] = {}
       for _, method in pairs(v) do
          -- TODO make whitelist or blacklist for methods and devices
-
             if method == "amountOfCitizens"
             or method == "getHappiness"
             or method == "maxOfCitizens"
             -- or method == "getCitizens"
             or method == "isUnderAttack"
             or method == "isUnderRaid"
+            or method == "getRequests"
+            or method == "getBuildings"
+            or method == "isUnderRaid"
             or method == "getVisitors"
             or method == "getRequests"
-            or method == "getWorkOrders" then
-print(device, method)
-               local result = device[method]()
+            or method == "getWorkOrders" 
+            then
+            local result = device[method]()
+            print(device, method, result)
 
-               if type(result) == table and result.tags ~= nil then
-                  print(result)
-                  result.tags = {}
+            if method == "getBuildings"
+            or method == "getRequests"
+            or method == "getWorkOrders"
+            or method == "getVisitors" then
+               local count = 0
+               for _, item in pairs(result) do
+                  count = count +1
                end
-
-               MM[deviceName][method] = result
-               MM[deviceName]["name"] = "MagicTownColonyIntegrator"
+               result = count
             end
+            MM[deviceName][method] = result
+            MM[deviceName]["name"] = "MagicTownColonyIntegrator"
+         end
       end
-      -- print(MM[deviceName])
    end
    return MM
 end
@@ -75,6 +82,7 @@ while true do
    loopCounter = loopCounter + 1
    print("Loop " .. loopCounter .. " started.")
    local last = GetStatusOfAttachedDevices()
+   -- print(last)
    WriteToFile(json.encode(last), "monitorData.json", "w")
    print("Loop " .. loopCounter .. " finished. Next pass in "..WAIT_SECONDS.." seconds.")
    sleep(WAIT_SECONDS)
