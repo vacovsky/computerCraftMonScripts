@@ -7,6 +7,8 @@ local FUEL_MATS = {
    "ae2:certus_quartz_crystal",
    "ae2:charged_certus_quartz_crystal",
    --
+   "minecraft:nether_star",
+   "minecraft:wither_skull",
    "minecraft:obsidian",
    "minecraft:water",
 
@@ -39,6 +41,7 @@ local FUEL_MATS = {
    "mekanism:polonium",
    "mekanism:pellet_uranium",
    "mekanism:uranium",
+   "mekanism:block_uranium",
    "mekanism:raw_uranium",
    "mekanism:fluorite_gem",
    "mekanism:lithium",

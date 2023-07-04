@@ -32,9 +32,9 @@ add_rule("REACTOR DAMAGE        <=  10%", function()
 	return data.reactor_damage <= 0.10, value
 end)
 
-add_rule("REACTOR COOLANT LEVEL >=  70%", function()
+add_rule("REACTOR COOLANT LEVEL >=  35%", function()
 	local value = string.format("%3d%%", math.floor(data.reactor_coolant * 100))
-	return data.reactor_coolant >= 0.70, value
+	return data.reactor_coolant >= 0.35, value
 end)
 
 add_rule("REACTOR WASTE LEVEL   <=  90%", function()

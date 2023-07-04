@@ -10,8 +10,14 @@ var WATCHED_FILES = []string{
 	// Mekanism and stuff
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\40\monitorData.json`,
 
-	// colonyIntegrator
+	// Trona  colonyIntegrator
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\28\monitorData.json`,
+
+	// Magic Town  colonyIntegrator
+	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\1\monitorData.json`,
+
+	// Witch Hazel colonyIntegrator
+	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\42\monitorData.json`,
 
 	// AE2 storage  general
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\33\monitorData.json`,

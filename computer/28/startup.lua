@@ -27,13 +27,13 @@ function GetStatusOfAttachedDevices()
             if method == "amountOfCitizens"
             or method == "getHappiness"
             or method == "maxOfCitizens"
-            or method == "getCitizens"
+            -- or method == "getCitizens"
             or method == "isUnderAttack"
             or method == "isUnderRaid"
             or method == "getVisitors"
             or method == "getRequests"
             or method == "getWorkOrders" then
-
+print(device, method)
                local result = device[method]()
 
                if type(result) == table and result.tags ~= nil then
@@ -42,7 +42,7 @@ function GetStatusOfAttachedDevices()
                end
 
                MM[deviceName][method] = result
-               MM[deviceName]["name"] = "colonyIntegrator"
+               MM[deviceName]["name"] = "TronaColonyIntegrator"
             end
       end
       -- print(MM[deviceName])
