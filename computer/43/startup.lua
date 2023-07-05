@@ -1,6 +1,6 @@
 json = require "json"
 
-local WAIT_SECONDS = 90
+local WAIT_SECONDS = 30
 local exportDirection = "bottom"
 local meBridge = peripheral.find("meBridge")
 local colony = peripheral.find("colonyIntegrator")
