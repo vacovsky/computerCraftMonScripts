@@ -2,6 +2,7 @@ json = require "json"
 
 local WAIT_SECONDS = 300
 local DEVICES = {}
+local LastLoopResult = {}
 
 function LoadDevices()
    for k,v in pairs(peripheral.getNames()) do
@@ -66,7 +67,7 @@ function GetStatusOfAttachedDevices()
       end
       -- print(MM[deviceName])
    end
-   return MM
+   LastLoopResult = MM
 end
 
 function WriteToFile(input, fileName, mode)
@@ -93,8 +94,13 @@ local loopCounter = 0
 while true do
    loopCounter = loopCounter + 1
    print("Loop " .. loopCounter .. " started.")
-   local last = GetStatusOfAttachedDevices()
-   WriteToFile(json.encode(last), "monitorData.json", "w")
+   
+   if pcall(GetStatusOfAttachedDevices) then 
+      WriteToFile(json.encode(LastLoopResult), "monitorData.json", "w")
+      print("Loop " .. loopCounter .. " finished. Next pass in "..WAIT_SECONDS.." seconds.")
+   end
+   -- local last = GetStatusOfAttachedDevices()
+   -- WriteToFile(json.encode(last), "monitorData.json", "w")
    print("Loop " .. loopCounter .. " finished. Next pass in "..WAIT_SECONDS.." seconds.")
    sleep(WAIT_SECONDS)
 end
