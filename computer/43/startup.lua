@@ -1,7 +1,7 @@
 json = require "json"
 
 local WAIT_SECONDS = 30
-local exportDirection = "bottom"
+local exportDirection = "down"
 local meBridge = peripheral.find("meBridge")
 local colony = peripheral.find("colonyIntegrator")
 --------------------------
@@ -23,6 +23,8 @@ function GetColonyRequests()
 end
 
 function SubmitBuildRequestToAutomation(requests)
+    WriteToFile(json.encode(requests), "requests.json", "w")
+
     for k, request in pairs(requests) do
         for k2, item in pairs(request.items) do
             local acr = {
@@ -56,8 +58,8 @@ local loopCounter = 0
 while true do
    loopCounter = loopCounter + 1
    print("Loop " .. loopCounter .. " started.")
-   Main(0)
-    --    WriteToFile(json.encode(last), "monitorData.json", "w")
-   print("Loop " .. loopCounter .. " finished. Next pass in "..WAIT_SECONDS.." seconds.")
+   if pcall(Main) then
+        print("Loop " .. loopCounter .. " finished. Next pass in "..WAIT_SECONDS.." seconds.") 
+   end
    sleep(WAIT_SECONDS)
 end

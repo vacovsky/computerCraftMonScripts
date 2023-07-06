@@ -46,6 +46,7 @@ local FUEL_MATS = {
    "mekanism:fluorite_gem",
    "mekanism:lithium",
    "mekanism:raw_osmium",
+   "mekanism:raw_lead",
    --
    "industrialforegoing:ether_gas",
    "industrialforegoing:latex",
