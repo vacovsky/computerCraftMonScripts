@@ -13,7 +13,7 @@ var WATCHED_FILES = []string{
 	// Trona  colonyIntegrator
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\28\monitorData.json`,
 
-	// Magic Town  colonyIntegrator
+	// Magic Town colonyIntegrator
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\1\monitorData.json`,
 
 	// Witch Hazel colonyIntegrator
@@ -24,6 +24,12 @@ var WATCHED_FILES = []string{
 
 	// AE2 nuclear items tracker
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\41\monitorData.json`,
+
+	// Magic Town crafting requests served counter
+	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\44\requestsServed.json`,
+
+	// Trona crafting requests served counter
+	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\43\requestsServed.json`,
 }
 
 func main() {
