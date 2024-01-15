@@ -25,11 +25,14 @@ var WATCHED_FILES = []string{
 	// AE2 nuclear items tracker
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\41\monitorData.json`,
 
-	// Magic Town crafting requests served counter
+	// Magic Town (Paradise Hills) crafting requests served counter
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\44\requestsServed.json`,
 
 	// Trona crafting requests served counter
 	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\43\requestsServed.json`,
+
+	// Witch Hazel crafting requests served counter
+	`E:\minecraft_servers\direwolf20_1.12\world\computercraft\computer\45\requestsServed.json`,
 }
 
 func main() {
